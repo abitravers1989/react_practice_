@@ -5,7 +5,7 @@ import {
   HashRouter
 } from "react-router-dom";
 import Home from "./home";
-import Stuff from "./stuff";
+import HazardID from "./hazardID";
 import Contact from "./contact";
 
 class Main extends Component {
@@ -13,15 +13,15 @@ class Main extends Component {
       return (
           <HashRouter>
             <div>
-            <h1>Simple SPA</h1>
+            <h1>PSM Self Assessment Questionaire</h1>
             <ul className="header">
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/stuff">Stuff</NavLink></li>
+                <li><NavLink exact to="/">Home</NavLink></li>
+                <li><NavLink to="/hazardID">Hazard ID</NavLink></li>
                 <li><NavLink to="/contact">Contact</NavLink></li>              
             </ul>
             <div className="content">  
-                <Route path="/" component={Home}/> 
-                <Route path="/stuff" component={Stuff}/> 
+                <Route exact path="/" component={Home}/> 
+                <Route path="/hazardID" component={HazardID}/> 
                 <Route path="/contact" component={Contact}/>
             </div>
           </div>
